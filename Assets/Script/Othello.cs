@@ -41,15 +41,20 @@ public class Othello : MonoBehaviour
             for (var c = 0; c < _columns; c++)
             {
                 var cell = Instantiate(_cellPrefab);
-                cell.transform.SetParent(parent);
+                cell.transform.SetParent(transform, false);
                 _cells[r, c] = cell;
             }
         }
 
+        //for (var r = 0; r < _rows; r++)
+        //{
+        //    for (var c = 0; c < _columns; c++)
+        //    {
+        //        if (r == 4 && c == 4 || r == 5 && c == 4 || r == 4 && c == 5 || r == 5 && c == 5)
+        //        {
 
+        //        }
     }
-
-
 
     // Update is called once per frame
     void Update()
