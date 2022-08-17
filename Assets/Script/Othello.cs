@@ -5,60 +5,27 @@ using UnityEngine.UI;
 
 public class Othello : MonoBehaviour
 {
-    [SerializeField]
-    private int _rows = 1;
 
     [SerializeField]
-    private int _columns;
+    //private Piece _piecePrefab = null;
 
-    [SerializeField]
-    private GridLayoutGroup _gridLayoutGroup = null;
-
-    [SerializeField]
-    private Cell _cellPrefab = null;
-
-    List<Cell> _cells = new List<Cell>();
+    List<Piece> _piece = new List<Piece>();
 
 
     void Start()
     {
-        var parent = _gridLayoutGroup.gameObject.transform;
-        if (_columns < _rows)
+
+        // 0`ŒÂ”-1‚Ü‚Å‚ÌŽq‚ð‡”Ô‚É”z—ñ‚ÉŠi”[
+        for (var i = 0; i < this.transform.childCount; ++i)
         {
-            _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _gridLayoutGroup.constraintCount = _columns;
-        }
-        else
-        {
-            _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedRowCount;
-            _gridLayoutGroup.constraintCount = _rows;
+            _piece.Add(this.transform.GetChild(i).GetComponentInChildren<Piece>());
         }
 
-        var _cells = new Cell[_rows, _columns];
-
-        for (var r = 0; r < _rows; r++)
-        {
-            for (var c = 0; c < _columns; c++)
-            {
-                var cell = Instantiate(_cellPrefab);
-                cell.transform.SetParent(transform, false);
-                _cells[r, c] = cell;
-            }
-        }
-
-        //for (var r = 0; r < _rows; r++)
-        //{
-        //    for (var c = 0; c < _columns; c++)
-        //    {
-        //        if (r == 4 && c == 4 || r == 5 && c == 4 || r == 4 && c == 5 || r == 5 && c == 5)
-        //        {
-
-        //        }
     }
-
     // Update is called once per frame
     void Update()
     {
         
     }
+
 }
