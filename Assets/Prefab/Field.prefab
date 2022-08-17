@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4460507340038148013}
   - component: {fileID: 8099671441639824965}
   - component: {fileID: 3315561625493818801}
-  - component: {fileID: 1720181381630770842}
+  - component: {fileID: 1044562019}
   m_Layer: 5
   m_Name: Field
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1720181381630770842
+--- !u!114 &1044562019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,6 +100,10 @@ PrefabInstance:
     - target: {fileID: 153311425560692737, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
       propertyPath: m_Name
       value: Piece
+      objectReference: {fileID: 0}
+    - target: {fileID: 153311425560692737, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2443024570142684803, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
       propertyPath: m_Pivot.x
