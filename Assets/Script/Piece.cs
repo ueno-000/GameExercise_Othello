@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-  public enum color
+public enum PieceColor
 {
     black = 1,
     white = -1
@@ -11,22 +12,30 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
+    private Image _piece;
+
+    [SerializeField] public PieceColor piececolor = PieceColor.black;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        _piece = this.transform.GetChild(0).GetComponent<Image>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
 
-    public static implicit operator Piece(GameObject v)
+    public void ChangeColor(int id)
     {
-        throw new NotImplementedException();
+        switch (piececolor)
+        {
+            case (PieceColor)1:
+                break;
+            case (PieceColor)(-1):
+                break;
+        }
     }
-
-
 }
