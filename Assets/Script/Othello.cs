@@ -6,13 +6,10 @@ using UnityEngine.UI;
 public class Othello : MonoBehaviour
 {
 
-    [SerializeField]
-    private Piece _piecePrefab = null;
-
-    List<Piece> _piece = new List<Piece>();
+    [SerializeField] private List<Piece> _piece = new List<Piece>();
 
 
-    void Start()
+    private void Start()
     {
         for (var i = 0; i < this.transform.childCount; ++i)
         {
@@ -29,7 +26,7 @@ public class Othello : MonoBehaviour
 
     }
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
