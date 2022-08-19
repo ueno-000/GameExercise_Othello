@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4061d3e913072e24d90ef70197ec6266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _piece: {fileID: 4720191447125764715}
+  piececolor: 0
 --- !u!1001 &4873412603059724906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 153311425560692737, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2443024570142684803, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
       propertyPath: m_Pivot.x
@@ -199,6 +201,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
+--- !u!1 &4720191447125764715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 153311425560692737, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
+  m_PrefabInstance: {fileID: 4873412603059724906}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7081500390854661353 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2443024570142684803, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
