@@ -7,35 +7,58 @@ using UnityEngine.UI;
 public enum PieceColor
 {
     black = 1,
-    white = -1
+    white = -1,
+
+    none = 0,
 }
 
 public class Piece : MonoBehaviour
 {
-    private Image _piece;
+    [SerializeField] private GameObject _piece;
 
-    [SerializeField] public PieceColor piececolor = PieceColor.black;
+    private Color _thisColor;
+    //private int id = 0;
+
+    [SerializeField] public PieceColor piececolor = PieceColor.none;
 
     // Start is called before the first frame update
     private void Start()
     {
-        _piece = this.transform.GetChild(0).GetComponent<Image>();
+        _thisColor = GetComponent<Image>().color;
+
+        piececolor = PieceColor.none;
+
+        OnPieceStateChange();
+
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
-
-    public void ChangeColor(int id)
+    public void OnPieceStateChange()
     {
         switch (piececolor)
         {
-            case (PieceColor)1:
+            case PieceColor.black:
+                _piece.GetComponent<Image>().color = Color.black;
                 break;
-            case (PieceColor)(-1):
+            case PieceColor.white:
+                _piece.GetComponent<Image>().color = Color.white;
+                break;
+            case PieceColor.none:
+                _piece.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
                 break;
         }
     }
+
+    private void OnValidate()
+    {
+
+
+
+    }
+    // Update is called once per frame
+    private void Update()
+    {
+        OnPieceStateChange();  
+    }
+
+
 }

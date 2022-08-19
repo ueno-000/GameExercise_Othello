@@ -13,12 +13,15 @@ public class Othello : MonoBehaviour
     {
         for (var i = 0; i < this.transform.childCount; ++i)
         {
-            _piece.Add(this.transform.GetChild(i).GetComponentInChildren<Piece>());
+            var p = this.transform.GetChild(i).GetComponentInChildren<Piece>();
+            _piece.Add(p);
             
             //真ん中四つのpieceをアクティブ化
             if (i == 27 || i == 28 || i == 35 || i == 36)
             {
-                this.transform.GetChild(i).GetComponent<Transform>().GetChild(0).gameObject.SetActive(true);                
+                if(i == 27||i == 36) {p.piececolor = PieceColor.black;}
+                else { p.piececolor = PieceColor.white; }
+                
             }
         }
 
