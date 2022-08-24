@@ -1577,6 +1577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 428793183}
     m_Modifications:
+    - target: {fileID: 1044562019, guid: 732490e8555557047bb73c3500feb66c, type: 3}
+      propertyPath: piececolor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4460507340038148013, guid: 732490e8555557047bb73c3500feb66c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1987,7 +1991,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1044562019, guid: 732490e8555557047bb73c3500feb66c, type: 3}
       propertyPath: piececolor
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4460507340038148013, guid: 732490e8555557047bb73c3500feb66c, type: 3}
       propertyPath: m_Pivot.x

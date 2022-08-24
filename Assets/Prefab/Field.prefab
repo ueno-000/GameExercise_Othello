@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8099671441639824965
 CanvasRenderer:
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _piece: {fileID: 4720191447125764715}
-  piececolor: 0
+  piececolor: 1
 --- !u!1001 &4873412603059724906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,19 +137,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2443024570142684803, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 15
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2443024570142684803, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 15
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2443024570142684803, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2443024570142684803, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2443024570142684803, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -199,6 +199,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3912290770086233118, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ec61d881404000448d974025f7c92ba, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abcaebaff6fe92b46bd946034234074e, type: 3}
 --- !u!1 &4720191447125764715 stripped
