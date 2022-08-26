@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Othello : MonoBehaviour
+public class Othello : MonoBehaviour,IPointerClickHandler
 {
 
     [SerializeField] private List<Piece> _piece = new List<Piece>();
@@ -24,9 +25,6 @@ public class Othello : MonoBehaviour
                 
             }
         }
-
-
-
     }
     // Update is called once per frame
     private void Update()
@@ -34,4 +32,16 @@ public class Othello : MonoBehaviour
         
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            Debug.Log("左クリック");
+        }
+        else if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            Debug.Log("右クリック");
+        }
+
+    }
 }
